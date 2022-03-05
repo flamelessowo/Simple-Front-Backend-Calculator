@@ -10,7 +10,7 @@
 <body>
     <table class="tablecolor">
         <div>
-            <input type="text" class="input">
+            <input type="text" class="input" id="myInput">
         </div>
         <div><tr>
             <th><button class="buttonfont">7</button></th>
@@ -36,10 +36,16 @@
             <th><button class="buttonfont color">=</button></th>
             <th><button class="buttonfont color">+</button></th>
         </tr>
+
+        </div>
+        <div>
+                <input type="text" class="input" readonly="readonly">
+                <button onclick="document.getElementById('myInput').value = ''" style = "font-size: 25px; background-color: black; color:gray;padding: 4px 4px">C</button>        
+
         </div>
         
 
     </table>
-    
+   
 </body>
 </html>
