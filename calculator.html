@@ -13,39 +13,39 @@
             <input type="text" class="input" id="myInput">
         </div>
         <div><tr>
-            <th><button class="buttonfont">7</button></th>
-            <th><button class="buttonfont">8</button></th>
-            <th><button class="buttonfont">9</button></th>
-            <th><button class="buttonfont color">*</button></th>
+            <th><button value="7" class="buttonfont" onclick="addToExpression(this.value)">7</button></th>
+            <th><button value="8" class="buttonfont" onclick="addToExpression(this.value)">8</button></th>
+            <th><button value="9" class="buttonfont" onclick="addToExpression(this.value)">9</button></th>
+            <th><button value="*" class="buttonfont color" onclick="addToExpression(this.value)">*</button></th>
         </tr>
         <tr>
-            <th><button class="buttonfont">4</button></th>
-            <th><button class="buttonfont">5</button></th>
-            <th><button class="buttonfont">6</button></th>
-            <th><button class="buttonfont color">/</button></th>
+            <th><button value="4" class="buttonfont" onclick="addToExpression(this.value)">4</button></th>
+            <th><button value="5" class="buttonfont" onclick="addToExpression(this.value)">5</button></th>
+            <th><button value="6" class="buttonfont" onclick="addToExpression(this.value)">6</button></th>
+            <th><button value="/" class="buttonfont color" onclick="addToExpression(this.value)">/</button></th>
         </tr>
         <tr>
-            <th><button class="buttonfont">1</button></th>
-            <th><button class="buttonfont">2</button></th>
-            <th><button class="buttonfont">3</button></th>
-            <th><button class="buttonfont color">-</button></th>
+            <th><button value="1" class="buttonfont" onclick="addToExpression(this.value)">1</button></th>
+            <th><button value="2" class="buttonfont" onclick="addToExpression(this.value)">2</button></th>
+            <th><button value="3" class="buttonfont" onclick="addToExpression(this.value)">3</button></th>
+            <th><button value="-" class="buttonfont color" onclick="addToExpression(this.value)">-</button></th>
         </tr>
         <tr>
-            <th><button class="buttonfont">0</button></th>
-            <th><button class="buttonfont color">.</button></th>
-            <th><button class="buttonfont color">=</button></th>
-            <th><button class="buttonfont color">+</button></th>
+            <th><button value="0" class="buttonfont" onclick="addToExpression(this.value)" >0</button></th>
+            <th><button value="." class="buttonfont color" onclick="addToExpression(this.value)">.</button></th>
+            <th><button value="=" class="buttonfont color" onclick="sendInput()">=</button></th>
+            <th><button value="+" class="buttonfont color" onclick="addToExpression(this.value)">+</button></th>
         </tr>
 
         </div>
         <div>
-                <input type="text" class="input" readonly="readonly">
-                <button onclick="document.getElementById('myInput').value = ''" style = "font-size: 25px; background-color: black; color:gray;padding: 4px 4px">C</button>        
+                <input type="text" id="myOutput" class="input" readonly="readonly">
+                <button onclick="clearExpression()" style = "font-size: 25px; background-color: black; color:gray;padding: 4px 4px">C</button>
 
         </div>
         
 
     </table>
-   
+    <script src="calculator.js"></script>
 </body>
 </html>

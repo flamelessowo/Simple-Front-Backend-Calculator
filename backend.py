@@ -7,11 +7,9 @@ class Calculation(BaseModel):
     expression: str
 
 
-origins = [
-    "http://localhost:8080",
-]
-
 app = FastAPI()
+
+origins = ['*']
 
 app.add_middleware(
     CORSMiddleware,
@@ -22,10 +20,10 @@ app.add_middleware(
 )
 
 
-@app.get("/calculate/")
+@app.post("/calculate/")
 async def solve_calculation(calculation: Calculation):
     try:
         calc = eval(calculation.expression)
-        return calc
+        return {"result": str(calc)}
     except Exception:
         raise HTTPException(status_code=404, detail="not valid calculation")
